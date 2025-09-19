@@ -1,5 +1,5 @@
 # 시각화
-## 데이터로 그래프 그리기 
+## ▶️데이터로 그래프 그리기 
 ```python
 # 파이썬 warning 무시
 import warnings
@@ -29,7 +29,7 @@ ax.plot(df.index, df['컬럼명']) #x,y 설정
 plt.show()
 ```
 
-## 조건 추가하여 그래프 그리기 
+## ▶️조건 추가하여 그래프 그리기 
 ```python
 # 데이터 준비
 x = ['조건 A인 경우', '조건 B인 경우']
@@ -49,14 +49,31 @@ ax.bar(x, y)
 plt.show()
 ```
 
-## 데이터 분포 확인
+## ▶️데이터 분포 확인
 <img width="490" height="366" alt="image" src="https://github.com/user-attachments/assets/a8a00904-4026-4a98-bc83-d8a4776a9c3a" />
 
 그냥 지그재그 처럼 보이지만! 이런 형태는 '반복적인 패턴'이 보인다고 할 수 있다. 
 무엇을 기준으로 반복하고 있는지 (특정 구간이 있는지, 요일마다 반복되는지 등) 확인해보기. 
 이를통해 종속변수의 패턴과 특성을 파악하고, 해당 구간에 맞는 모델을 선택하여 예측을 할 수 있다. 
 
-## 그룹화하여 시각화
+<img width="467" height="163" alt="image" src="https://github.com/user-attachments/assets/03782a37-ef88-4138-89f8-46c8640e8e6c" />
+
+상승 추세가 보인다. 
+
+<img width="465" height="154" alt="image" src="https://github.com/user-attachments/assets/ad49884f-ecba-442b-b62c-1c5d4ed909bb" />
+
+순간적으로 급등하는 부분이 존재한다. 
+
+<img width="503" height="123" alt="image" src="https://github.com/user-attachments/assets/f7b39cd1-64cd-4ea1-ad1d-9cd80892b2e9" />
+
+주기가 일정하지 않지만, 상승하고 하락하는 패턴이 보인다. 
+
+<img width="506" height="151" alt="image" src="https://github.com/user-attachments/assets/cdf37f20-1ee1-4b10-b6da-64f5eb656552" />
+
+특정 x 부분 이후부터 y값이 증가하여 그래프가 빽빽한 모습을 볼 수 있다. 
+
+
+## ▶️그룹화하여 시각화
 월 마다 추이가 궁금하다면
 ```python
 # 1. 일자(2025-09-19)에서 월 컬럼 추가하기 
@@ -74,15 +91,16 @@ df.groupby('월').mean()['석식계'].plot(ax=ax)
 plt.show()
 ```
 
+<hr/>
 
 # 이상치 제거 
-## 불리언 인덱싱 
+## ▶️불리언 인덱싱 
 df[조건] 이 만족하는 행이나 열을 선택할 수 있다. 
 ```python
 df2 = df[df['컬럼'] != 0]
 ```
 
-## 특정 조건의 행열 선택 
+## ▶️특정 조건의 행열 선택 
 loc[행 인덱스 조건, 열 인덱스 조건] 으로 추출해서 
 값을 변경할 수 있다. 
 ```python
