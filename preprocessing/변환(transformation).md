@@ -30,13 +30,17 @@
 2. 표준화
 
 ### 1.정규화
-- Min-max scaling : 데이터 범위를 0~1로 변환
+- Min Max scaling : 데이터 범위를 0~1로 변환
 - Scikit-learn의 MinMaxScaler() 존재
 - Df = (df - df.min())/(df.max()-df.min())
 
 ### 2.표준화
-- 평균 0, 표준편차 1인 표준 정규분포로 변환
+- StandardScaling : 평균 0, 표준편차 1인 표준 정규분포로 변환
+- scikit-learn의 StandardScaler() 존재
 - Df = (df - df.mean())/df.std()
+
+<img width="586" height="232" alt="image" src="https://github.com/user-attachments/assets/6f72e0b7-7a20-4022-a8f9-3053f9fc3832" />
+
 
 # 변수 선택
 - 특성 선택이라고도 함
